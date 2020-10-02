@@ -1,0 +1,45 @@
+package org.magic.item;
+
+import java.util.Random;
+
+public class Roller {
+	
+	private Random rand;
+	private int mod;
+	private int dc;
+	private int gold;
+	private int daysRemaining;
+	private int daysExcess;
+	private int timeExpended;
+	
+	public Roller(int modifier, int difficultyClass, int goldSum){
+		rand = new Random();
+		mod = modifier;
+		dc = difficultyClass;
+		gold = goldSum;
+		daysRemaining = daysRemainingFinder();
+		daysExcess = 0;
+		timeExpended =0;
+	}
+	
+	private int daysRemainingFinder(){
+		return (int) gold/25;
+	}
+	
+	private int daysRemainingFinder(int g){
+		return (int) g/25;
+	}
+	
+	public int roll(int modifier, int difficultyClass, int gold){
+		mod = modifier;
+		dc = difficultyClass;
+		daysRemaining = daysRemainingFinder(gold);
+		
+	}
+	
+	public int roll(){
+		
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+package org.matt.alex;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		int x = 5;
+		if(x > 10){
+			x = x + 1;
+			System.out.println("We are less than 10");
+		}
+		else{
+			System.out.println(x);
+		}
+		System.out.println("hello Matt");
+	}
+
+}

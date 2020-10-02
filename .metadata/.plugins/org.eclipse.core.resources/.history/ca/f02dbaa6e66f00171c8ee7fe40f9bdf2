@@ -1,0 +1,36 @@
+package org.magic.item;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		int g = 50000;
+		Roller a = new Roller(10, 20, g);
+		BigInteger sum = new BigInteger("0");
+		//System.out.println(a.roll());
+		BigDecimal average;
+		int temp;
+		for(int i = 0; i < 1000000; i++){
+			temp = a.roll();
+			sum = (temp != -54) ? sum.add(new BigInteger(Integer.toString(a.roll()))) : sum.add(new BigInteger(Integer.toString(a.daysRemainingFinder(g))));
+			average = new BigDecimal(sum);
+			try{
+				average = average.divide(new BigDecimal(Integer.toString(i+1)));
+				System.out.println(i);
+				System.out.println(average.toString() + " This is our average");
+			}
+			catch(ArithmeticException e){
+				System.out.println("Non-terminating decimal produced... printing double...");
+				double problems = sum.intValue();
+				System.out.println(problems/(i+1));
+				System.out.println(problems);
+				System.out.println(i);
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;StdDraw.java&apos; to &apos;TentMap/src/org.alex.tentmap&apos;&#x0D;&#x0A;- Original project: &apos;LogisticMap&apos;&#x0D;&#x0A;- Destination element: &apos;TentMap/src/org.alex.tentmap&apos;&#x0D;&#x0A;- Original element: &apos;com.alex.logmap.StdDraw.java&apos;" description="Copy compilation unit" destination="=TentMap/src&lt;org.alex.tentmap" element1="/src&lt;com.alex.logmap{StdDraw.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1499100740384" units="1" version="1.0"/>
+</session>

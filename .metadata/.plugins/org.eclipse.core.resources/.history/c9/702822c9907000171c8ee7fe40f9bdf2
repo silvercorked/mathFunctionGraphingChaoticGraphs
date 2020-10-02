@@ -1,0 +1,33 @@
+package com.alex.logmap;
+
+import org.main.std.StdDraw;
+
+public class feigenbaum implements Runnable{
+	
+	public feigenbaum(){
+		primary();
+	}
+	public void run(){}
+	static double logistic(double y, double r){
+		return 4.0 * r * y * (1.0 - y);
+	}
+	public void primary(){
+		int N = 1000;
+		StdDraw.setXscale(-1.0, 1.0);
+		StdDraw.setYscale(-1.0, 1.0);
+		
+		for(double r = 0.70; r <= 1.0; r += 0.1/N){
+			double y = Math.random();
+			for(int i = 0; i < 1000; i++){
+				y =  feigenbaum.logistic(y,r);
+			}
+			
+			for(int i = 0; i < 100; i++){
+				y = feigenbaum.logistic(y, r);
+				System.out.println("y: " + y + " r: " + r);
+				StdDraw.point(r, y);
+			}
+			StdDraw.show();
+		}
+	}
+}
